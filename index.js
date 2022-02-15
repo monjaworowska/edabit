@@ -48,3 +48,16 @@ const arrayOfMultiples = (num, length) =>
 /* 10 Create a function that takes an array of numbers and returns the second 
 largest number.*/
 const secondLargest = (a) => a.sort((a, b) => b - a)[1];
+
+/* 11 Create a function that takes in an array (slot machine outcome) and 
+returns true if all elements in the array are identical, and false otherwise.*/
+function testJackpot(result) {
+  return result.every((el) => el === result[0]);
+}
+const testJackpot = (result) => new Set(result).size === 1;
+
+/* 12 Clone an array clone([1, 1]) ➞ [1, 1, [1, 1]] */
+function clone(arr) {
+  arr.push([...arr]);
+  return arr;
+}
